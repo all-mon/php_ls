@@ -12,3 +12,4 @@ pm_winnt:notice] [pid 7816:tid 532] AH00354: Child: Starting 64 worker threads.
 [Thu Jan 05 10:22:42.936285 2023] [core:notice] [pid 13276:tid 452] AH00094: Command line: 'C:\\CNUS2\\Monahov\\Apache24\\bin\\httpd.exe -d C:/CNUS2/Monahov/Apache24'
 [Thu Jan 05 10:22:42.950275 2023] [mpm_winnt:notice] [pid 13276:tid 452] AH00418: Parent: Created child process 19128
 [Thu Jan 05 10:22:43.487657 2023] [mpm_winnt:notice] [pid 19128:tid 516] AH00354: Child: Starting 64 worker threads.
+[Thu Jan 05 16:46:42.074000 2023] [php:error] [pid 19128:tid 1140] [client ::1:52456] script 'C:/CNUS2/Monahov/php_ls/0501/scope.php' not found or unable to stat
