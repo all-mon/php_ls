@@ -47,3 +47,19 @@ pm_winnt:notice] [pid 7816:tid 532] AH00354: Child: Starting 64 worker threads.
 [Fri Jan 06 19:26:19.371988 2023] [php:warn] [pid 2656:tid 1148] [client ::1:55029] PHP Warning:  move_uploaded_file(): Unable to move &quot;C:\\CNUS2\\Monahov\\php_ls\\upload\\phpF64A.tmp&quot; to &quot;upload/2.jpg&quot; in C:\\CNUS2\\Monahov\\php_ls\\0601\\upload.php on line 12, referer: http://localhost/0601/upload.php
 [Fri Jan 06 19:27:27.697433 2023] [php:warn] [pid 2656:tid 1148] [client ::1:55048] PHP Warning:  move_uploaded_file(C:/CNUS2/Monahov/upload/2.jpg): Failed to open stream: No such file or directory in C:\\CNUS2\\Monahov\\php_ls\\0601\\upload.php on line 12, referer: http://localhost/0601/upload.php
 [Fri Jan 06 19:27:27.697433 2023] [php:warn] [pid 2656:tid 1148] [client ::1:55048] PHP Warning:  move_uploaded_file(): Unable to move &quot;C:\\CNUS2\\Monahov\\php_ls\\upload\\php133.tmp&quot; to &quot;C:/CNUS2/Monahov/upload/2.jpg&quot; in C:\\CNUS2\\Monahov\\php_ls\\0601\\upload.php on line 12, referer: http://localhost/0601/upload.php
+[Mon Jan 09 16:39:35.998770 2023] [mpm_winnt:notice] [pid 6716:tid 392] AH00455: Apache/2.4.54 (Win64) PHP/8.2.0 configured -- resuming normal operations
+[Mon Jan 09 16:39:36.014382 2023] [mpm_winnt:notice] [pid 6716:tid 392] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Mon Jan 09 16:39:36.014382 2023] [core:notice] [pid 6716:tid 392] AH00094: Command line: 'D:\\Apache24\\bin\\httpd.exe -d D:/Apache24'
+[Mon Jan 09 16:39:36.014382 2023] [mpm_winnt:notice] [pid 6716:tid 392] AH00418: Parent: Created child process 10864
+[Mon Jan 09 16:39:36.467440 2023] [mpm_winnt:notice] [pid 10864:tid 412] AH00354: Child: Starting 64 worker threads.
+[Mon Jan 09 16:49:53.337857 2023] [mpm_winnt:notice] [pid 6716:tid 392] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Jan 09 16:49:55.352109 2023] [mpm_winnt:notice] [pid 10864:tid 412] AH00364: Child: All worker threads have exited.
+[Mon Jan 09 16:49:55.424103 2023] [mpm_winnt:notice] [pid 6716:tid 392] AH00430: Parent: Child process 10864 exited successfully.
+[Mon Jan 09 22:56:09.055701 2023] [mpm_winnt:notice] [pid 10540:tid 436] AH00455: Apache/2.4.54 (Win64) PHP/8.2.0 configured -- resuming normal operations
+[Mon Jan 09 22:56:09.055701 2023] [mpm_winnt:notice] [pid 10540:tid 436] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Mon Jan 09 22:56:09.055701 2023] [core:notice] [pid 10540:tid 436] AH00094: Command line: 'D:\\Apache24\\bin\\httpd.exe -d D:/Apache24'
+[Mon Jan 09 22:56:09.071333 2023] [mpm_winnt:notice] [pid 10540:tid 436] AH00418: Parent: Created child process 10112
+[Mon Jan 09 22:56:09.508847 2023] [mpm_winnt:notice] [pid 10112:tid 420] AH00354: Child: Starting 64 worker threads.
+[Tue Jan 10 06:11:18.130887 2023] [mpm_winnt:notice] [pid 10540:tid 436] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Jan 10 06:11:20.162197 2023] [mpm_winnt:notice] [pid 10112:tid 420] AH00364: Child: All worker threads have exited.
+[Tue Jan 10 06:11:20.271508 2023] [mpm_winnt:notice] [pid 10540:tid 436] AH00430: Parent: Child process 10112 exited successfully.
