@@ -8,7 +8,7 @@
 <?php
 if ($_FILES && $_FILES["filename"]["error"]== UPLOAD_ERR_OK)
 {
-    $name = "C:/CNUS2/Monahov/php_ls/upload/" . $_FILES["filename"]["name"];
+    $name = "upload/" . $_FILES["filename"]["name"];
     move_uploaded_file($_FILES["filename"]["tmp_name"], $name);
     echo "Файл загружен";
 }
