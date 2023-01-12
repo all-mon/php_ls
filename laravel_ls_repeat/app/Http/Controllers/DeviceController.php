@@ -10,4 +10,8 @@ class DeviceController extends Controller
     {
         dd($id);
     }
+    public function getAll()
+    {
+        dd('test');
+    }
 }
