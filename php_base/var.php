@@ -6,27 +6,33 @@ $str = 'abc';
 $bool = false;
 $null = null;
 
+$arr = compact('int','float','str','bool','null');//puts vars in an array
 
-/*На самом деле массив в PHP - это упорядоченное отображение, которое устанавливает соответствие между значением и ключом.
-Этот тип оптимизирован в нескольких направлениях, поэтому вы можете использовать его как собственно массив,
-список (вектор), хеш-таблицу (являющуюся реализацией карты), словарь, коллекцию, стек, очередь и, возможно, что-то ещё.
-Так как значением массива может быть другой массив PHP, можно также создавать деревья и многомерные массивы.*/
-$justArray = array('1',2,44.2,null,false,$int);
-$array = [
-    1 => 'first',
-    2 => 2,
-    'key' => 'value',
-];
+// in separate files:
+//callable
+//mixed
+//object
+//array
+//resource
 
-function tmp(mixed $mixed){
-    var_dump($mixed);
+
+//get var type
+foreach ($arr as $item)
+{
+    if (is_int($item))
+    {
+        echo "IS_INT() , TRUE \n";
+    }else{
+        var_dump($item);//value and type
+        $type = get_debug_type($item);//type only
+        echo $type . "\n";
+    }
+    echo "+++++++++++next++++++++++++++\n";
 }
-tmp('str');
-tmp(1);
-tmp(10.2);
-tmp(function ($a=10,$b=5){
-    return $a * $b;
-});
 
 
-?>
+
+
+
+
+
