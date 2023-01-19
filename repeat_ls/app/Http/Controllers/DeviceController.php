@@ -30,16 +30,23 @@ class DeviceController extends Controller
     {
         return view('device.show',compact('device'));
     }
-    public function edit()
+    public function edit(Device $device)
     {
-        dd('edit');
+        return view('device.edit',compact('device'));
     }
-    public function update()
+    public function update(Device $device)
     {
-        dd('update');
+        $data = request()->validate([
+            'name'=>'string',
+            'system'=>'string',
+            'description'=>'string'
+        ]);
+        $device->update($data);
+        return redirect()->route('device.show',$device->id);
     }
-    public function delete()
+    public function destroy(Device $device)
     {
-        dd('delete');
+        $device->delete();
+        return redirect()->route('device.index');
     }
 }
