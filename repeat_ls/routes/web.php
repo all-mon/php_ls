@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\SystemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/devices/{device}',[DeviceController::class,'show'])->name('device.s
 Route::get('/devices/{device}/edit',[DeviceController::class,'edit'])->name('device.edit');
 Route::patch('/devices/{device}',[DeviceController::class,'update'])->name('device.update');
 Route::delete('/devices/{device}',[DeviceController::class,'destroy'])->name('device.delete');
+
+Route::get('/systems',[SystemController::class,'index'])->name('system.index');
