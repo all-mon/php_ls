@@ -13,4 +13,10 @@ class Device extends Model
 
     protected $table = 'devices';
     protected $guarded = [];
+
+    public function systems()
+    {
+        return $this->
+        belongsToMany(System::class,'device_systems','device_id','system_id');
+    }
 }

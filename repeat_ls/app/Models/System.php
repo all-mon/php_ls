@@ -17,6 +17,6 @@ class System extends Model
     public function devices()
     {
         return $this->
-        belongsToMany(Device::class,'device_systems','device_id','system_id');
+        belongsToMany(Device::class,'device_systems','system_id','device_id');
     }
 }
