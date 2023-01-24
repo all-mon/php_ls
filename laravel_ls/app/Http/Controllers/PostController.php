@@ -25,7 +25,7 @@ class PostController extends Controller
     public function store()
     {
         $data = request()->validate([
-            'title' => 'required | string',
+            'title' => 'string',
             'content' => 'string',
             'image' => 'string',
             'category_id' => '',
@@ -54,8 +54,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $categories = Category::all();
-        $tags = Tag::all();
-        return view('post.edit', compact('post', 'categories','tags'));
+        return view('post.edit', compact('post', 'categories'));
     }
 
     public function update(Post $post)
@@ -65,13 +64,8 @@ class PostController extends Controller
             'content' => 'string',
             'image' => 'string',
             'category_id' => '',
-            'tags' => '',
         ]);
-        $tags = $data['tags'];
-        unset($data['tags']);
-
         $post->update($data);
-        $post->tags()->sync($tags);
         return redirect()->route('post.show', $post->id);
     }
 
