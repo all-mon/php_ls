@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -18,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'index'])->name('home');
 
 Route::group(['namespace' => 'App\Http\Controllers\Post'], function(){
     Route::get('/posts', 'IndexController')->name('post.index');
@@ -32,7 +31,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Post'], function(){
     Route::delete('/posts/{post}', 'DestroyController')->name('post.delete');
 });
 
-Route::group(['namespace' => 'App\Http\Controllers\Admin','prefix'=>'admin'],function(){
+Route::group(['namespace' => 'App\Http\Controllers\Admin','prefix'=>'admin','middleware'=>'admin'],function(){
     Route::group(['namespace' => 'Post'], function(){
         Route::get('/post', 'IndexController')->name('admin.post.index');
     });
@@ -53,3 +52,7 @@ Route::get('/posts/update_or_create', [PostController::class, 'updateOrCreate'])
 Route::get('/main', [MainController::class, 'index'])->name('main.index');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

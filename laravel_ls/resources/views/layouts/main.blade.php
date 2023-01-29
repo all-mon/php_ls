@@ -13,22 +13,28 @@
     <div class="row">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link "href="{{route('main.index')}}">Main</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('post.index')}}">Posts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('about.index')}}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('contacts.index')}}">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('main.index')}}">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('post.index')}}">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('about.index')}}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('contacts.index')}}">Contacts</a>
+                    </li>
+
+                    @can('view',auth()->user())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.post.index')}}">Admin</a>
+                    </li>
+                    @endcan
+                </ul>
+            </div>
 
         </nav>
     </div>
