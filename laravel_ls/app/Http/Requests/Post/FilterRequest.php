@@ -24,11 +24,11 @@ class FilterRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string',
-            'content' => 'string',
-            'image' => 'string',
+            'title' => '',
+            'content' => '',
             'category_id' => '',
-            'tags' => '',
+            'page' => '',
+            'per_page' => '',
         ];
     }
 }
